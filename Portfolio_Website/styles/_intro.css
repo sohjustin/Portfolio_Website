@@ -1,0 +1,124 @@
+.main-head{
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+
+nav{
+  min-height: 10vh;
+  width: 57%;
+  flex-wrap: wrap;
+}
+
+.logo{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex: 1 1 20rem;
+}
+
+.logo h1{
+  margin: 2rem;
+}
+
+nav ul{
+  flex: 1 1 40rem;
+}
+
+.intro{
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+
+}
+
+.intro h2{
+  font-size: 7rem;
+  padding-top: 2rem;
+  background: var(--gradient);   /* color of the gradient text */
+  -webkit-background-clip: text; /* remove the gradient background */
+  -webkit-text-fill-color: transparent; /* display the text in the gradient color */
+}
+
+.intro h3 {
+  font-size: 5rem;
+  padding: 2rem 0rem;
+}
+
+.intro p{
+  padding-top: 2rem;
+  color: var(--grey-text);
+}
+
+.splash {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 100%;
+  z-index: -1;
+}
+
+.intro-social {
+  margin-top: 4rem;
+}
+
+.intro-social a{
+  margin-right: 5rem;
+}
+
+.active {
+  background: var(--grey-text);
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+
+.intro-text,
+.intro-images {
+  flex: 1 1 10rem;
+}
+
+#plant-left {
+  animation: plant 1.5s ease infinite alternate;
+}
+
+#plant-right {
+  animation: plant 1.5s ease infinite alternate 0.5s; /* moves slower by 0.5s */
+}
+
+#me {
+  animation: me 1.5s linear infinite alternate;
+  transform-origin: bottom; /* center of gravity at bottom */
+}
+#clock-arrow {
+  animation: clock 3s infinite linear;
+  transform-box: fill-box;  /* Definition: layout box to which the transform and transform-origin properties relate. */
+  transform-origin: bottom; /* center of gravity at bottom */
+}
+
+@keyframes me {
+  from {
+   transform: rotateZ(-6deg); /* move left */
+  }
+  to {
+    transform: rotateZ(6deg); /* move right */
+  }
+}
+
+@keyframes plant {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-30%); /* move up */
+  }
+}
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg); /* turn clock hand */
+  }
+}

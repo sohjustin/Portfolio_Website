@@ -1,0 +1,65 @@
+.projects {
+  width: 90%;
+  margin: auto;
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.projects h2 {
+  margin: 5rem;
+}
+
+.travelly,
+.elenajoy, .cmp, .avalon{
+  flex: 1 1 40rem;
+}
+
+.travelly h2{
+  background: linear-gradient(to top, #e0e0e0, #000000); /* color of the gradient text */
+  -webkit-background-clip: text; /* remove the gradient background */
+  -webkit-text-fill-color: transparent; /* display the text in the gradient color */
+
+}
+
+.elenajoy h2{
+  background: linear-gradient(to top, #e9c3fa, #d6a1ed);   /* color of the gradient text */
+  -webkit-background-clip: text; /* remove the gradient background */
+  -webkit-text-fill-color: transparent; /* display the text in the gradient color */
+
+}
+
+.cmp{
+  margin-bottom: 2rem;
+}
+
+.cmp img{
+  width: 90%;
+  height: auto;
+  border-radius: 3%;
+
+}
+
+.cmp h2{
+  background: linear-gradient(to top, #38d39f, #38a4d3);   /* color of the gradient text */
+  -webkit-background-clip: text; /* remove the gradient background */
+  -webkit-text-fill-color: transparent; /* display the text in the gradient color */
+
+}
+
+/* .avalon h2{
+  background: linear-gradient(to top, #b2c26d, #f5d236);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.avalon img{
+  width: 60%;
+  height: auto;
+  border-radius: 2.5%;
+
+} */
