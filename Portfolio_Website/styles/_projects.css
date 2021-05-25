@@ -1,3 +1,7 @@
+body{
+  background-color: white;
+}
+
 .projects {
   width: 90%;
   margin: auto;
@@ -8,46 +12,120 @@
   flex-direction: row;
   text-align: center;
   flex-wrap: wrap;
+  display: grid;
+  grid-template-areas: 'thecoronatimes'
+                       'elenajoy'
+                       'sportify';
 }
 .projects h2 {
   margin: 5rem;
 }
 
-.travelly,
+.thecoronatimes,
 .elenajoy, .cmp, .avalon{
   flex: 1 1 40rem;
 }
 
-.travelly h2{
-  background: linear-gradient(to top, #e0e0e0, #000000); /* color of the gradient text */
+.thecoronatimes{
+  grid-area: thecoronatimes;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: 'thecoronatimes-h2 thecoronatimes-h2'
+                      'thecoronatimes-img thecoronatimes-text';
+}
+
+.thecoronatimes h2{
+  background: linear-gradient(to bottom, #e58c8a, #eec0c6); /* color of the gradient text */
   -webkit-background-clip: text; /* remove the gradient background */
   -webkit-text-fill-color: transparent; /* display the text in the gradient color */
-
+  grid-area: thecoronatimes-h2;
 }
 
-.elenajoy h2{
-  background: linear-gradient(to top, #e9c3fa, #d6a1ed);   /* color of the gradient text */
-  -webkit-background-clip: text; /* remove the gradient background */
-  -webkit-text-fill-color: transparent; /* display the text in the gradient color */
-
-}
-
-.cmp{
-  margin-bottom: 2rem;
-}
-
-.cmp img{
+.thecoronatimes img{
   width: 90%;
   height: auto;
   border-radius: 3%;
+  grid-area: thecoronatimes-img;
+  grid-column: 1/5;
+}
+
+.thecoronatimes p{
+  grid-area: thecoronatimes-text;
+  grid-row: 2/4;
+  text-align: left;
+  margin: auto;
+  color: #c76f7b;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2rem;
+}
+
+.elenajoy{
+  grid-area: elenajoy;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: 'elenajoy-h2 elenajoy-h2'
+                       'elenajoy-img elenajoy-text';
+}
+
+.elenajoy h2{
+  background: linear-gradient(to bottom, #08e1ae, #98de5b);   /* color of the gradient text */
+  -webkit-background-clip: text; /* remove the gradient background */
+  -webkit-text-fill-color: transparent; /* display the text in the gradient color */
+  grid-area: elenajoy-h2;
+}
+
+.elenajoy img{
+  width: 90%;
+  height: auto;
+  border-radius: 3%;
+  grid-area: elenajoy-img;
+  grid-column: 1/5;
+}
+
+.elenajoy p{
+  grid-area: elenajoy-text;
+  grid-row: 2/4;
+  text-align: left;
+  margin: auto;
+  color: #2cc758;
+  font-family: 'Frank Ruhl Libre', serif;
+  /* font-size: 2rem; */
+}
+
+.sportify{
+  margin-bottom: 2rem;
+  grid-area: sportify;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: 'sportify-h2 sportify-h2'
+                       'sportify-img sportify-text';
 
 }
 
-.cmp h2{
+.sportify h2{
   background: linear-gradient(to top, #38d39f, #38a4d3);   /* color of the gradient text */
   -webkit-background-clip: text; /* remove the gradient background */
   -webkit-text-fill-color: transparent; /* display the text in the gradient color */
+  grid-area: sportify-h2;
 
+}
+
+.sportify img{
+  width: 88%;
+  height: auto;
+  border-radius: 3%;
+  grid-area: sportify-img;
+  grid-column: 1/5;
+}
+
+.sportify p{
+  grid-area: sportify-text;
+  grid-row: 2/4;
+  text-align: left;
+  margin: auto;
+  color: #1eb0b0;
+  font-weight: 400;
+  /* font-size: 2rem; */
 }
 
 /* .avalon h2{

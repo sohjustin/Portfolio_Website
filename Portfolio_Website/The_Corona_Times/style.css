@@ -1,0 +1,361 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  width: 90%;
+  margin: auto;
+}
+
+body{
+  font-family: 'Roboto Mono', monospace;
+  background-color: #eec0c6;
+}
+
+.header-head{
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 0.5px solid grey;
+}
+
+
+.header-head h1{
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bolder;
+  font-size: 5rem;
+  color: #eec0c6;
+}
+
+.header-head p{
+  align-self: flex-end;
+  font-size: 1.1rem;
+}
+
+.header-buttons{
+  align-self: flex-end;
+}
+
+.header-head button{
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+  padding: 0.8rem 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #567B95;
+  border: none;
+  cursor: pointer;
+}
+
+/* NAV BAR */
+
+nav ul{
+  min-height: 2vh;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.5px solid grey;
+}
+
+hr{
+  /* border-bottom: 0.8px solid black; */
+  margin-top: 2px;
+  border-top: 0.85px solid black;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 0.003rem solid black;
+}
+
+/*First & Second Column */
+.c-impacts{
+  width: 55vw;
+  font-size: 1.3rem;
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-template-areas: 'reopens data'
+                       'recession compare';
+
+}
+
+/*Left Column, Top Article*/
+.top-article{
+  grid-area: reopens;
+  border-bottom: 0.03rem solid grey;
+  margin: 1rem 1rem;
+}
+
+.top-article li{
+  margin-bottom: 1rem;
+  list-style-type: circle;
+}
+
+/*Left Column, Bottom Article*/
+.bottom-article{
+  grid-area: recession;
+  font-size: 1.2rem;
+  margin: 0rem 1rem;
+}
+
+/*Middle Column, Top Article*/
+.cc-data{
+  grid-area: data;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border-left: 0.03rem solid grey;
+  margin: 1rem 0rem 0rem 1rem;
+}
+
+.cc-data-box0{
+  grid-column: 1/4;
+  margin-top: 4.5rem;
+}
+
+.cc-data-box0 p{
+  font-weight: lighter;
+}
+
+.cc-data-box1, .cc-data-box2{
+  border-right: 0.03rem solid black;
+  border-bottom: 0.03rem solid black;
+}
+.cc-data-box4, .cc-data-box5{
+  border-right: 0.03rem solid black;
+  margin-bottom: 1rem;
+}
+
+.cc-data-box1{
+  margin-left: 1rem;
+}
+
+.cc-data-box4{
+  padding-left: 1rem;
+}
+
+.cc-data-box3{
+  border-bottom: 0.03rem solid black;
+  margin-right: 1rem;
+}
+
+.num-data{
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.num-data-c{
+  color: green;
+}
+
+.num-data-o{
+  color: darkblue;
+}
+
+.illness{
+  font-weight: 600;
+}
+
+.place{
+  font-weight: lighter;
+}
+
+/*Middle Column, Bottom Article*/
+.cc-compare{
+ grid-area: compare;
+ padding: 0rem 3rem;
+ margin-left: 1rem;
+ margin-bottom: 1rem;
+ border-left: 0.03rem solid grey;
+}
+
+.cc-compare ul{
+  list-style-type: circle;
+  margin-left: 1.4rem;
+}
+
+
+/*Right Column*/
+aside{
+  width: 33vw;
+  font-size: 1.3rem;
+  border-left: 0.03rem solid grey;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: 'editor-picks .'
+                       'prejudice-img prejudice-text'
+                       'isolation-text isolation-img';
+}
+
+/*Right Column, Top Article*/
+.prejudice-img, .prejudice-text{
+  border-bottom: 0.03rem solid grey;
+}
+
+#edit-picks{
+  margin-left: 2rem;
+  grid-area: editor-picks;
+  grid-column: 1/3;
+  font-size: 1.6rem;
+}
+
+.prejudice-img{
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+  grid-area: prejudice-img;
+}
+
+.prejudice-img img{
+  max-width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+}
+
+.prejudice-text{
+  grid-area: prejudice-text;
+  margin-top: 1rem;
+}
+
+/*Right Column, Bottom Article*/
+.isolation-text{
+  grid-area: isolation-text;
+  margin: 1rem 1rem;
+}
+
+.isolation-img{
+  grid-area: isolation-img;
+  margin: 1rem 1rem;
+}
+
+.isolation-img img{
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+}
+
+
+/*Footer*/
+
+footer{
+  margin-top: 0.2rem;
+  border-top: 0.03rem solid grey;
+  margin-bottom: 1rem;
+}
+
+.footer-header h1{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+}
+
+.footer-body{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: 'news .'
+                       'news-ul .'
+                       'sub-h4 .'
+                       'sub-1 sub-2';
+}
+
+
+/*Left Column*/
+.news{
+  border-right: 0.03rem solid black;
+  margin: 1rem 1rem;
+
+}
+
+.news h4{
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  grid-area: news;
+  grid-column: 1/4;
+
+}
+.news-columns{
+  display: grid;
+  grid-column: auto auto auto;
+  grid-template-areas: 'nc1 nc2 nc3';
+  list-style: none;
+  margin-right: 1rem;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+}
+
+.news-column-1{
+  grid-area: nc1;
+}
+
+.news-column-2{
+  grid-area: nc2;
+}
+.news-column-3{
+  grid-area: nc3;
+}
+
+/* Right Column */
+.subscribe h4{
+  grid-area: sub-h4;
+  grid-column: 1/4;
+
+  margin: 1rem 1rem 0rem 1rem;
+  font-size: 1.5rem;
+}
+
+.sub-ul{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: 'sub-1 sub-2';
+  margin-left: 1rem;
+}
+
+.sub-ul ul{
+  list-style: none;
+  line-height: 1.8rem;
+}
+
+/* Subscribe Left Section */
+.sub-1{
+  grid-area: sub-1;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+/* Subscripe Left Section - Icons */
+#sub-icon-1{
+  width: 7%;
+}
+#sub-icon-2{
+  width: 5%;
+}
+
+#sub-icon-3{
+  width: 5%;
+}
+
+#sub-icon-4{
+  width: 6%;
+}
+
+
+/* Subscribe Right Section */
+
+.sub-2{
+  grid-area: sub-2;
+  margin-top: 0.2rem;
+}
