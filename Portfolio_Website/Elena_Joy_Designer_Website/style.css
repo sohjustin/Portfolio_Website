@@ -1,0 +1,438 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Ruhl';
+    src: url('fonts/FrankRuhlLibre-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Ruhl Medium';
+    src: url('fonts/FrankRuhlLibre-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Vibes';
+    src: url('fonts/GreatVibes-Regular.ttf');
+}
+
+html {
+  font-size: 62.5%;
+  --header1: calc(2rem + 1vw);
+  --header2: calc(3.5rem + 1vw);
+  --header3: calc(3rem + 1vw);
+  --header4: calc(2.4rem + 1vw);
+  --text: calc(1.5rem + 1vw);
+  --big: calc(6rem + 1vw);
+  --special-color: #906272;
+  --background-color: #414141;
+  --gray-text: #525252;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: var(--header1);
+}
+
+li,
+button,
+label,
+input,
+a,
+p {
+  font-size: var(--text);
+}
+h2 {
+  font-size: var(--header2);
+}
+h3 {
+  font-size: var(--header3);
+}
+h4,
+h5 {
+  font-size: var(--header4);
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  font-family: "Ruhl", sans-serif;
+  animation: opening 1s ease-in-out forwards;
+}
+h1 {
+  font-family: "Vibes", sans-serif;
+}
+
+/* Header */
+header{
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+nav{
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+nav h1{
+  font-family: 'Vibes';
+  font-weight: bold;
+  flex: 1 1 20rem;
+  padding: 1rem 0;
+}
+
+nav ul{
+  font-family: 'Ruhl';
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 1 20rem;
+}
+
+
+/* ABOUT */
+
+.about{
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-areas: 'about-l-sec about-r-sec';
+}
+
+.about-l-sect{
+  grid-area: about-l-sec;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.about-l-sect p{
+  width: 80%;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Ruhl';
+  color: #525252;
+}
+
+#gallery{
+  border: 1.5px solid black;
+  padding: 1.5rem 4.5rem;
+  font-family: 'Ruhl';
+
+}
+
+.about-r-sect{
+  grid-area: about-r-sec;
+  background: linear-gradient(#dad8dd, #dad1d4);
+  position: relative;
+  font-size: 0px;
+
+  position: relative;
+  z-index: 1;
+}
+
+#elena-joy{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.plant {
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+  z-index: -1;
+  transform: translateY(10%) rotateZ(-10deg) rotateX(-90deg);
+  animation: plant-entrance 1s ease-in-out 0.5s forwards,
+    plant-shake 2.2s infinite ease alternate-reverse 1.5s;
+  transform-origin: bottom;
+  max-height: 80%;
+}
+.plant2 {
+  left: 40%;
+}
+
+/*ANIMATIONS */
+
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes plant-entrance {
+  from {
+    transform: translateY(10%) rotateZ(-10deg) rotateX(-90deg);
+  }
+  to {
+    transform: translateY(0%) rotateZ(0deg) rotateX(0deg);
+  }
+}
+@keyframes plant-shake {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+.plants{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+  z-index: -1;
+}
+
+/* WORK */
+
+.work{
+  display: flex;
+
+}
+
+.work-l-sect{
+  flex: 4 1 40rem;
+  position: relative;
+  letter-spacing: 2rem;
+
+}
+.work-l-sect h5{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+
+}
+
+.work-r-sect{
+  flex: 6  1 40rem;
+
+  background-color: #414141;
+  color: white;
+}
+
+.work-rs-body{
+  width: 80%;
+  margin: auto;
+
+}
+
+.work-r-sect h2{
+  text-align: center;
+  padding: 2rem 4rem;
+  font-family: "Vibes";
+
+}
+.work-r-sect h3{
+  font-family: "Ruhl Medium";
+
+}
+
+.work-r-sect p{
+  padding: 2rem 0;
+}
+
+#ej-about{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* GALLERY */
+
+.gallery{
+  position: relative;
+
+}
+
+.gallery-head{
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #424242;
+  color: white;
+  text-align: center;
+}
+
+.gallery-head h2{
+  padding: 1rem 12rem;
+}
+
+.gallery-head p{
+  padding-bottom: 1rem;
+}
+
+
+.gallery-img{
+  position: relative;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-areas: 'img1 img1 img2'
+                       'img3 img4 img2';
+
+}
+
+.img{
+  width: 100%;
+}
+
+#img1{
+  grid-area: img1;
+}
+
+#img2{
+  grid-area: img2;
+
+}
+
+#img3{
+  grid-area: img3;
+}
+
+#img4{
+  grid-area: img4;
+}
+
+
+/* CONTACT US */
+
+.contact{
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-areas: 'contact-l-sect contact-r-sect';
+}
+
+.contact-l-sect{
+  grid-area: contact-l-sect;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-l-sect h2{
+  font-weight: bold;
+  font-family: "Ruhl", sans-serif;
+
+  padding-bottom: 5rem;
+}
+
+.contact-l-sect h2 span{
+  color: #906272;
+  font-size: 6.5rem;
+}
+
+#contact-form{
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 0rem;
+}
+
+#contact-form label{
+  text-align: left;
+}
+
+#contact-form input{
+  padding: 1rem 1rem;
+  margin: 3rem 0rem;
+  background-color: #414141;
+  font-family: "Ruhl", sans-serif;
+  color: white;
+  border: none;
+  border-radius: 0;
+
+}
+
+#contact-form button{
+  background-color: #906272;
+  padding: 1rem 8rem;
+  border: none;
+  border-radius: 0;
+
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Ruhl", sans-serif;
+}
+
+
+.contact-r-sect{
+  grid-area: contact-r-sect;
+  font-size: 0;
+}
+
+#contact-img{
+  width: 100%;
+  height: 100%;
+
+}
+
+
+/* FOOTER */
+footer{
+  background-color: #424242;
+  color: white;
+  font-weight: normal;
+}
+
+.footer{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.footer h4{
+  flex: 3 1 20rem;
+  padding: 2.5rem 0;
+  font-size: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  color: white;
+}
+
+.social-media{
+  flex: 2 1 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
