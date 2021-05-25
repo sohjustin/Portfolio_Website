@@ -68,7 +68,7 @@ body{
 }
 
 .elenajoy h2{
-  background: linear-gradient(to bottom, #08e1ae, #98de5b);   /* color of the gradient text */
+  background: linear-gradient(to top, #96d9a1, #167d30);   /* color of the gradient text */
   -webkit-background-clip: text; /* remove the gradient background */
   -webkit-text-fill-color: transparent; /* display the text in the gradient color */
   grid-area: elenajoy-h2;
@@ -87,7 +87,7 @@ body{
   grid-row: 2/4;
   text-align: left;
   margin: auto;
-  color: #2cc758;
+  color: #299653;
   font-family: 'Frank Ruhl Libre', serif;
   /* font-size: 2rem; */
 }
@@ -125,7 +125,6 @@ body{
   margin: auto;
   color: #1eb0b0;
   font-weight: 400;
-  /* font-size: 2rem; */
 }
 
 /* .avalon h2{
