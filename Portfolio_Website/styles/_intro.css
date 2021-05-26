@@ -56,7 +56,7 @@ nav ul{
   top: 0%;
   right: 0%;
   height: 100%;
-  z-index: -1;
+  z-index: 1;;
 }
 
 .intro-social {
@@ -77,6 +77,10 @@ nav ul{
 .intro-text,
 .intro-images {
   flex: 1 1 10rem;
+}
+
+#all-svgs{
+  z-index: 2;
 }
 
 #plant-left {
