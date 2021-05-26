@@ -15,18 +15,23 @@
     <header>
       <nav>
         <h1><a href="#">Elena Joy</a></h1>
-        <ul>
+        <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="burger">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </div>
       </nav>
     </header>
 
     <main>
       <section class="about" id="about">
-        <div class="about-l-sect">
-          <h2>Elena Joy<h2>
+        <div class="about-l-sect flex">
+          <h2 id="about-name">Elena Joy<h2>
           <h2>Photography</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
               minima assumenda expedita similique quaerat maiores ab, itaque hic
@@ -35,8 +40,8 @@
         </div>
         <div class="about-r-sect">
           <img id="elena-joy" src="img/elena-joy.png" alt="elena-joy">
-          <img  class="plants plant" src="img/plant1.png" alt="plant-1">
-          <img class="plants plant" src="img/plant2.png" alt="plant-2">
+          <img  class="plants plant1" src="img/plant1.png" alt="plant-1">
+          <img class="plants plant2" src="img/plant2.png" alt="plant-2">
         </div>
       </section>
 
@@ -81,17 +86,18 @@
       </section>
 
       <section class="contact" id="contact">
-        <div class="contact-l-sect">
-          <h2>Get in <br><span>touch<span>.</h2>
-          <form id="contact-form">
+        <div class="form-wrapper flex">
+          <h2>
+            Get in <br />
+            <span> touch.</span>
+          </h2>
+          <form>
             <label for="email">Your Email:</label>
-            <input type="email" name="email" id="email">
-            <button type="submit" name="button">Submit</button>
+            <input type="email" id="email" required />
+            <button type="submit">Submit</button>
           </form>
         </div>
-        <div class="contact-r-sect">
-          <img id="contact-img" src="img\contact-image.jpg" alt="contact-img">
-        </div>
+        <img src="./img/contact-image.jpg" alt="elena-joy" />
       </section>
     </main>
 
@@ -111,5 +117,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="app.js"></script>
+
   </body>
 </html>
