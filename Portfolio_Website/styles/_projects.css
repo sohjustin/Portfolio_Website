@@ -124,7 +124,8 @@ body{
   text-align: left;
   margin: auto;
   color: #1eb0b0;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 2rem;
 }
 
 /* .avalon h2{
